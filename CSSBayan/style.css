@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #845ef7;
+    --color-secondary: #5c7cfa;
+    --border-bottom: 1px solid #862e9c;
+    --font-color: #495057;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: var(--font-color);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}

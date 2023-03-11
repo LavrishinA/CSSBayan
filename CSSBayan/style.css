@@ -51,15 +51,18 @@ h1 {
     list-style: none;
     border-bottom: var(--border-bottom);
 }
-.meme__item:active .meme__img {
-    width: 100%;
-    height: 25rem;
-}
 .meme__content {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
+}
+.meme-toggle {
+    display: none;
+}
+.meme-toggle:checked ~ .meme__img {
+    width: 100%;
+    height: 25rem;
 }
 .meme__header {
     display: flex;
@@ -71,7 +74,6 @@ h1 {
     color: #333;
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
 }
 .meme__btn {
     border: none;
@@ -84,13 +86,33 @@ h1 {
     transform: rotate(45deg);
     height: 1.5rem;
     width: 1.5rem;
+    transition: all 0.3s;
+}
+.meme-toggle:checked ~ .meme__header > .meme__btn-icon {
+    transform: rotate(0deg);
 }
 .meme__img {
     width: 0;
     height: 0;
-    background-image: url(img/1.webp);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     border-radius: 0.5rem;
+    transition: all 0.4s;
+}
+.meme__img-1 {
+    background-image: url(img/1.webp);
+}
+.meme__img-2 {
+    background-image: url(img/2.webp);
+}
+.meme__img-3 {
+    background-image: url(img/3.webp);
+}
+.meme__img-4 {
+    background-image: url(img/4.webp);
+    background-size: 90%;
+}
+.meme__img-5 {
+    background-image: url(img/5.webp);
 }

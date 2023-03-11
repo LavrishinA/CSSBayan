@@ -21,6 +21,7 @@ body {
     font-weight: 600;
     background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
     background-repeat: no-repeat;
+    background-size: 100%;
     height: 100vh;
     color: var(--font-color);
 }
@@ -48,7 +49,6 @@ h1 {
 .meme__item {
     padding-bottom: 1rem;
     width: 100%;
-    list-style: none;
     border-bottom: var(--border-bottom);
 }
 .meme__content {
@@ -75,6 +75,10 @@ h1 {
     font-size: 2rem;
     font-weight: 600;
 }
+.meme-toggle:checked ~ .meme__header > .meme__name {
+    color: #862e9c;
+}
+
 .meme__btn {
     border: none;
     outline: none;
@@ -94,7 +98,7 @@ h1 {
 .meme__img {
     width: 0;
     height: 0;
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 0.5rem;
@@ -111,8 +115,30 @@ h1 {
 }
 .meme__img-4 {
     background-image: url(img/4.webp);
-    background-size: 90%;
 }
 .meme__img-5 {
     background-image: url(img/5.webp);
+}
+
+@media (min-width: 820px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (min-width: 820px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 100%;
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 10rem;
+    }
 }
